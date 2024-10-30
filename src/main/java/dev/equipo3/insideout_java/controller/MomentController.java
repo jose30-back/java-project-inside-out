@@ -18,6 +18,10 @@ public class MomentController {
         terminalMenu.displayMainMenu();
     }
 
+    public TerminalMenu getTerminalMenu() {
+        return terminalMenu;
+    }
+
     public void addMoment() {
         System.out.println("Enter title:");
         String title = terminalMenu.getInput();
