@@ -1,17 +1,37 @@
 package dev.equipo3.insideout_java;
 
-/**
- * Hello world!
- */
-public final class App {
-    private App() {
+import dev.equipo3.insideout_java.controller.MomentController;
+
+public class App {
+    private final MomentController momentController = new MomentController();
+    private boolean running = true;
+
+    public void run() {
+        while (running) {
+            momentController.displayMainMenu();
+            String input = momentController.getTerminalMenu().getInput();
+
+            try {
+                switch (Integer.parseInt(input)) {
+                    case 1 -> momentController.addMoment();
+                    case 2 -> momentController.viewMoments();
+                    case 3 -> momentController.deleteMoment();
+                    case 4 -> momentController.filterMoments();
+                    case 5 -> exit();
+                    default -> momentController.getTerminalMenu().displayMessage("Invalid choice.");
+                }
+            } catch (NumberFormatException e) {
+                momentController.getTerminalMenu().displayMessage("Please enter a valid number.");
+            }
+        }
     }
 
-    /**
-     * Says hello to the world.
-     * @param args The arguments of the program.
-     */
+    private void exit() {
+        momentController.getTerminalMenu().displayMessage("See you next time!!!");
+        running = false;
+    }
+
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        new App().run();
     }
 }
