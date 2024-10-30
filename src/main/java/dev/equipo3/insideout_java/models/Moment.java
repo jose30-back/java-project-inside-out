@@ -8,16 +8,18 @@ public class Moment {
     private int id; 
     private String tittle;
     private String description; 
+    private Emotions emotions;
     private LocalDateTime momentDate; 
     private LocalDateTime createdDate; 
     private LocalDateTime updatedDate;
 
 
-    public Moment(int id, String tittle, String description, LocalDateTime momentDate, LocalDateTime createdDate,
+    public Moment(int id, String tittle, String description, Emotions emotions, LocalDateTime momentDate, LocalDateTime createdDate,
             LocalDateTime updatedDate) {
         this.id = id++;
         this.tittle = tittle;
         this.description = description;
+        this.emotions = emotions;
         this.momentDate = momentDate;
         this.createdDate = LocalDateTime.now();
         this.updatedDate = LocalDateTime.now();
@@ -36,6 +38,10 @@ public class Moment {
 
     public String getDescription() {
         return description;
+    }
+
+    public Emotions getEmotions() {
+        return emotions;
     }
 
 
@@ -68,6 +74,10 @@ public class Moment {
         this.description = description;
     }
 
+    public void setEmotions(Emotions emotions) {
+        this.emotions = emotions;
+    } 
+
 
     public void setMomentDate(LocalDateTime momentDate) {
         this.momentDate = momentDate;
@@ -81,7 +91,7 @@ public class Moment {
 
     public void setUpdatedDate(LocalDateTime updatedDate) {
         this.updatedDate = updatedDate;
-    } 
+    }
 
 }
 
