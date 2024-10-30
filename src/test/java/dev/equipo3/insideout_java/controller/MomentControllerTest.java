@@ -1,5 +1,5 @@
 package dev.equipo3.insideout_java.controller;
 
-public class FiltrosTest {
+public class MomentControllerTest {
     
 }
