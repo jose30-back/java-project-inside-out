@@ -2,22 +2,19 @@ package dev.equipo3.insideout_java.models;
 
 import java.time.LocalDateTime;
 
-
 public class Moment {
-    
-    private int id; 
-    private String tittle;
-    private String description; 
+
+    private int id;
+    private String title;
+    private String description;
     private Emotions emotions;
-    private LocalDateTime momentDate; 
-    private LocalDateTime createdDate; 
+    private LocalDateTime momentDate;
+    private LocalDateTime createdDate;
     private LocalDateTime updatedDate;
 
-
-    public Moment(int id, String tittle, String description, Emotions emotions, LocalDateTime momentDate, LocalDateTime createdDate,
-            LocalDateTime updatedDate) {
+    public Moment(int id, String title, String description, Emotions emotions, LocalDateTime momentDate) {
         this.id = id++;
-        this.tittle = tittle;
+        this.title = title;
         this.description = description;
         this.emotions = emotions;
         this.momentDate = momentDate;
@@ -25,16 +22,13 @@ public class Moment {
         this.updatedDate = LocalDateTime.now();
     }
 
-
     public int getId() {
         return id;
     }
 
-
     public String getTittle() {
-        return tittle;
+        return title;
     }
-
 
     public String getDescription() {
         return description;
@@ -44,31 +38,25 @@ public class Moment {
         return emotions;
     }
 
-
     public LocalDateTime getMomentDate() {
         return momentDate;
     }
-
 
     public LocalDateTime getCreatedDate() {
         return createdDate;
     }
 
-
     public LocalDateTime getUpdatedDate() {
         return updatedDate;
     }
-
 
     public void setId(int id) {
         this.id = id;
     }
 
-
-    public void setTittle(String tittle) {
-        this.tittle = tittle;
+    public void setTittle(String title) {
+        this.title = title;
     }
-
 
     public void setDescription(String description) {
         this.description = description;
@@ -76,22 +64,18 @@ public class Moment {
 
     public void setEmotions(Emotions emotions) {
         this.emotions = emotions;
-    } 
-
+    }
 
     public void setMomentDate(LocalDateTime momentDate) {
         this.momentDate = momentDate;
     }
 
-
     public void setCreatedDate(LocalDateTime createdDate) {
         this.createdDate = createdDate;
     }
-
 
     public void setUpdatedDate(LocalDateTime updatedDate) {
         this.updatedDate = updatedDate;
     }
 
 }
-
