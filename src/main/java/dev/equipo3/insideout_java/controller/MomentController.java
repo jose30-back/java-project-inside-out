@@ -42,7 +42,7 @@ public class MomentController {
             return;
         }
 
-        Moment moment = new Moment(0, title, description, emotion, momentDate);
+        Moment moment = new Moment(1, title, description, emotion, momentDate);
         momentRepository.addMoment(moment);
         System.out.println("Moment successfully added!");
     }
