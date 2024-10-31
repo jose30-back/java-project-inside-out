@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 
 public class Moment {
 
+    private static int idCounter = 1;
     private int id;
     private String title;
     private String description;
@@ -13,7 +14,7 @@ public class Moment {
     private LocalDateTime updatedDate;
 
     public Moment(int id, String title, String description, Emotions emotions, LocalDateTime momentDate) {
-        this.id = id++;
+        this.id = idCounter++;
         this.title = title;
         this.description = description;
         this.emotions = emotions;
@@ -26,7 +27,7 @@ public class Moment {
         return id;
     }
 
-    public String getTittle() {
+    public String getTitle() {
         return title;
     }
 
@@ -50,11 +51,7 @@ public class Moment {
         return updatedDate;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setTittle(String title) {
+    public void setTitle(String title) {
         this.title = title;
     }
 
@@ -76,6 +73,20 @@ public class Moment {
 
     public void setUpdatedDate(LocalDateTime updatedDate) {
         this.updatedDate = updatedDate;
+    }
+
+    @Override
+    public String toString() {
+        return 
+  "----------------------\n" +
+  "Moment:\n" +
+                "ID: " + id + "\n" +
+                "Title: " + title + "\n" +
+                "Description: " + description + "\n" +
+                "Emotion: " + emotions + "\n" +
+                "Date: " + momentDate + "\n" +
+                "Created: " + createdDate + "\n" +
+                "Updated: " + updatedDate + "\n";
     }
 
 }
