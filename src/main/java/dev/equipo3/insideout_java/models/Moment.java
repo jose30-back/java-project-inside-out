@@ -8,16 +8,16 @@ public class Moment {
     private int id;
     private String title;
     private String description;
-    private Emotions emotions;
+    private Emotions emotion;
     private LocalDateTime momentDate;
     private LocalDateTime createdDate;
     private LocalDateTime updatedDate;
 
-    public Moment(int id, String title, String description, Emotions emotions, LocalDateTime momentDate) {
+    public Moment(int id, String title, String description, Emotions emotion, LocalDateTime momentDate) {
         this.id = idCounter++;
         this.title = title;
         this.description = description;
-        this.emotions = emotions;
+        this.emotion = emotion;
         this.momentDate = momentDate;
         this.createdDate = LocalDateTime.now();
         this.updatedDate = LocalDateTime.now();
@@ -36,7 +36,7 @@ public class Moment {
     }
 
     public Emotions getEmotions() {
-        return emotions;
+        return emotion;
     }
 
     public LocalDateTime getMomentDate() {
@@ -59,8 +59,8 @@ public class Moment {
         this.description = description;
     }
 
-    public void setEmotions(Emotions emotions) {
-        this.emotions = emotions;
+    public void setEmotions(Emotions emotion) {
+        this.emotion = emotion;
     }
 
     public void setMomentDate(LocalDateTime momentDate) {
@@ -77,13 +77,12 @@ public class Moment {
 
     @Override
     public String toString() {
-        return 
-  "----------------------\n" +
-  "Moment:\n" +
+        return "----------------------\n" +
+                "Moment:\n" +
                 "ID: " + id + "\n" +
                 "Title: " + title + "\n" +
                 "Description: " + description + "\n" +
-                "Emotion: " + emotions + "\n" +
+                "Emotion: " + emotion + "\n" +
                 "Date: " + momentDate + "\n" +
                 "Created: " + createdDate + "\n" +
                 "Updated: " + updatedDate + "\n";
