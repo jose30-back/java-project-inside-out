@@ -28,9 +28,9 @@ public class TerminalMenu {
 
     public void displayEmotionOptions() {
         System.out.println("Select an emotion:");
-        Emotions[] emotions = Emotions.values();
-        for (int i = 0; i < emotions.length; i++) {
-            System.out.println((i + 1) + ". " + emotions[i]);
+        Emotions[] emotion = Emotions.values();
+        for (int i = 0; i < emotion.length; i++) {
+            System.out.println((i + 1) + ". " + emotion[i]);
         }
         System.out.print("Select an emotion: ");
     }

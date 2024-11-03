@@ -4,19 +4,20 @@ import java.time.LocalDateTime;
 
 public class Moment {
 
+    private static int idCounter = 1;
     private int id;
     private String title;
     private String description;
-    private Emotions emotions;
+    private Emotions emotion;
     private LocalDateTime momentDate;
     private LocalDateTime createdDate;
     private LocalDateTime updatedDate;
 
-    public Moment(int id, String title, String description, Emotions emotions, LocalDateTime momentDate) {
-        this.id = id++;
+    public Moment(int id, String title, String description, Emotions emotion, LocalDateTime momentDate) {
+        this.id = idCounter++;
         this.title = title;
         this.description = description;
-        this.emotions = emotions;
+        this.emotion = emotion;
         this.momentDate = momentDate;
         this.createdDate = LocalDateTime.now();
         this.updatedDate = LocalDateTime.now();
@@ -26,7 +27,7 @@ public class Moment {
         return id;
     }
 
-    public String getTittle() {
+    public String getTitle() {
         return title;
     }
 
@@ -35,7 +36,7 @@ public class Moment {
     }
 
     public Emotions getEmotions() {
-        return emotions;
+        return emotion;
     }
 
     public LocalDateTime getMomentDate() {
@@ -50,11 +51,7 @@ public class Moment {
         return updatedDate;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setTittle(String title) {
+    public void setTitle(String title) {
         this.title = title;
     }
 
@@ -62,8 +59,8 @@ public class Moment {
         this.description = description;
     }
 
-    public void setEmotions(Emotions emotions) {
-        this.emotions = emotions;
+    public void setEmotions(Emotions emotion) {
+        this.emotion = emotion;
     }
 
     public void setMomentDate(LocalDateTime momentDate) {
@@ -76,6 +73,19 @@ public class Moment {
 
     public void setUpdatedDate(LocalDateTime updatedDate) {
         this.updatedDate = updatedDate;
+    }
+
+    @Override
+    public String toString() {
+        return "----------------------\n" +
+                "Moment:\n" +
+                "ID: " + id + "\n" +
+                "Title: " + title + "\n" +
+                "Description: " + description + "\n" +
+                "Emotion: " + emotion + "\n" +
+                "Date: " + momentDate + "\n" +
+                "Created: " + createdDate + "\n" +
+                "Updated: " + updatedDate + "\n";
     }
 
 }
