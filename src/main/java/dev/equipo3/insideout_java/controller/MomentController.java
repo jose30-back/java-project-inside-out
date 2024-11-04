@@ -1,7 +1,6 @@
 package dev.equipo3.insideout_java.controller;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 
@@ -26,7 +25,7 @@ public class MomentController {
         System.out.println("Enter title:");
         String title = terminalMenu.getInput();
 
-        LocalDateTime momentDate = null;
+        LocalDate momentDate = null;
         while (momentDate == null) {
             System.out.println("Enter date (dd/MM/yyyy):");
             String dateInput = terminalMenu.getInput();
@@ -93,16 +92,16 @@ public class MomentController {
     private void filterMomentsByDate() {
         System.out.println("Enter date to filter by (dd/MM/yyyy):");
         String dateInput = terminalMenu.getInput();
-        LocalDateTime date = parseDate(dateInput);
+        LocalDate date = parseDate(dateInput);
         if (date != null) {
             terminalMenu.displayMomentList(momentRepository.filterMomentsByDate(date));
         }
     }
 
-    private LocalDateTime parseDate(String date) {
+    private LocalDate parseDate(String date) {
         try {
             DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-            return LocalDate.parse(date, dateFormatter).atStartOfDay();
+            return LocalDate.parse(date, dateFormatter);
         } catch (DateTimeParseException e) {
             System.out.println("Invalid date format. Please enter date as dd/MM/yyyy.");
             return null;
