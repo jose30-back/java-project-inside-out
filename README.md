@@ -5,14 +5,16 @@ Basado en la película **Inside Out** 🇬🇧🇺🇸 [_Del Revés_ 🇪🇸, _
 ## Descripción con SIPNOSIS del proyecto 
 
 ### Planificación del proyecto
-    1. Se realizo la planificacion utilizando [Jira](https://www.atlassian.com/es/software/jira/free)
-    2. El projecto fue bajo el nombre  [javaProjectInsideOut](https://albertocasasofiuco-1730202167115.atlassian.net/jira/software/projects/JPIO/boards/2)
-    3. Los diagramas se encuentran en un el archivo [projectoInsideOut.drawio](https://drive.google.com/file/d/1NVHUrTjYrLSpKclKpEaub4_o8r0NiPPG/view?usp=drive_link)
+
+>    1. Se realizo la planificacion utilizando [Jira](https://www.atlassian.com/es/software/jira/free)
+>    2. El projecto fue bajo el nombre  [javaProjectInsideOut](https://albertocasasofiuco-1730202167115.atlassian.net/jira/software/projects/JPIO/boards/2)
+>    3. Los diagramas se encuentran en un el archivo [projectoInsideOut.drawio](https://drive.google.com/file/d/1NVHUrTjYrLSpKclKpEaub4_o8r0NiPPG/view?usp=drive_link)
 
 ### Realización de Diagramas
-    - Clases
-    - Historia de Usuario
-    - Modelo Vista Controlador (MVC)
+
+>    - Clases
+>    - Historia de Usuario
+>    - Modelo Vista Controlador (MVC)
 
 
 
