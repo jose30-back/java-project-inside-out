@@ -69,6 +69,18 @@ De las URL que aparecen a continuación realizar las descargas de los paquetes c
 
 ## Diagramas Realizados 
 
+  - DIAGRAMA DE CLASES
+
+    ![Diagrama de Clases](images/projectoInsideOut-CLASES.webp)
+    
+  - HISTORIAS DE USUARIOS
+
+    ![Historia de Usuario](images/projectoInsideOut-ACTIONS.webp)
+    
+  - MODELO VISTA CONTROLADOR
+
+    ![Modelo, Vista, Controlador](images/projectoInsideOut-MVC.webp)
+
 ## Autores:  
 
 - Nadiia Alaieva [@tizzifona](https://github.com/tizzifona)
