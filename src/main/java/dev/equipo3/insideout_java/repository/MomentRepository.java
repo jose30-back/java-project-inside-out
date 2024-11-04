@@ -1,5 +1,6 @@
 package dev.equipo3.insideout_java.repository;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +33,7 @@ public class MomentRepository {
         return filtered;
     }
 
-    public List<Moment> filterMomentsByDate(LocalDateTime date) {
+    public List<Moment> filterMomentsByDate(LocalDate date) {
         List<Moment> filtered = new ArrayList<>();
         for (Moment moment : moments) {
             if (moment.getMomentDate().equals(date)) {

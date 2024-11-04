@@ -1,6 +1,8 @@
 package dev.equipo3.insideout_java.models;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Moment {
 
@@ -9,11 +11,14 @@ public class Moment {
     private String title;
     private String description;
     private Emotions emotion;
-    private LocalDateTime momentDate;
+    private LocalDate momentDate;
     private LocalDateTime createdDate;
     private LocalDateTime updatedDate;
 
-    public Moment(int id, String title, String description, Emotions emotion, LocalDateTime momentDate) {
+    private static final DateTimeFormatter MOMENT_DATE_FORMATTER = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+    private static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("dd/MM/yy HH:mm");
+
+    public Moment(int id, String title, String description, Emotions emotion, LocalDate momentDate) {
         this.id = idCounter++;
         this.title = title;
         this.description = description;
@@ -39,7 +44,7 @@ public class Moment {
         return emotion;
     }
 
-    public LocalDateTime getMomentDate() {
+    public LocalDate getMomentDate() {
         return momentDate;
     }
 
@@ -63,7 +68,7 @@ public class Moment {
         this.emotion = emotion;
     }
 
-    public void setMomentDate(LocalDateTime momentDate) {
+    public void setMomentDate(LocalDate momentDate) {
         this.momentDate = momentDate;
     }
 
@@ -75,6 +80,14 @@ public class Moment {
         this.updatedDate = updatedDate;
     }
 
+    public String getFormattedCreatedDate() {
+        return createdDate.format(DATE_TIME_FORMATTER);
+    }
+
+    public String getFormattedUpdatedDate() {
+        return updatedDate.format(DATE_TIME_FORMATTER);
+    }
+
     @Override
     public String toString() {
         return "----------------------\n" +
@@ -83,9 +96,11 @@ public class Moment {
                 "Title: " + title + "\n" +
                 "Description: " + description + "\n" +
                 "Emotion: " + emotion + "\n" +
-                "Date: " + momentDate + "\n" +
-                "Created: " + createdDate + "\n" +
-                "Updated: " + updatedDate + "\n";
+                "Date: " + momentDate.format(MOMENT_DATE_FORMATTER)
+                + "\n" +
+                "Created: " + getFormattedCreatedDate()
+                + "\n" +
+                "Updated: " + getFormattedUpdatedDate() + "\n";
     }
 
 }
