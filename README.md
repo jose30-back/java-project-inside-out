@@ -3,14 +3,19 @@
 Basado en la película **Inside Out** 🇬🇧🇺🇸 [_Del Revés_ 🇪🇸, _Intensa-Mente_ (🇦🇷🇧🇴🇨🇱🇨🇴🇨🇷🇨🇺🇩🇴🇪🇨🇸🇻🇬🇹🇭🇳🇲🇽🇳🇮🇵🇾🇵🇪🇵🇷🇺🇾🇻🇪)] se ha pedido una aplicación de consola con la cual el usuario pueda gestionar las emociones de momentos vividos en un diario cada momento contará con un título una fecha en que ocurrió y una emoción asignada; además de un identificador fecha de creación y fecha de modificación.
 
 
-##descripción con SIPNOSIS del proyecto 
+##Descripción con SIPNOSIS del proyecto 
 
-##pre requisitos que se necesita instalar para poder ejecutar el proyecto 
+##Pre Requisitos (Que se necesita instalar para poder ejecutar el proyecto) 
 
-##pasos para la instalación 
+##Pasos para la instalación 
 
-##ejecución del test captura de cobertura 
+##Ejecución del test (Capturas de cobertura) 
 
-##diagramas realizados 
+##Diagramas Realizados 
 
-## autores:  
+##Autores:  
+
+- Nadiia Alaieva [@tizzifona](https://github.com/tizzifona)
+- Oksana Muzalevska [@omuzalevska](https://github.com/omuzalevska)
+- José Manuel Arango [@jose30-back](https://github.com/jose30-back)
+- Alberto Casas [@ofiucoder](https://github.com/ofiucoder)
