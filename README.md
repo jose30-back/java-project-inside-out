@@ -1,9 +1,3 @@
-<script type="module">
-  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-  import zenuml from 'https://cdn.jsdelivr.net/npm/@mermaid-js/mermaid-zenuml@0.1.0/dist/mermaid-zenuml.esm.min.mjs';
-  await mermaid.registerExternalDiagrams([zenuml]);
-</script>
-
 # Java-Project-Inside-Out
 
 Basado en la película **Inside Out** 🇬🇧🇺🇸 [_Del Revés_ 🇪🇸, _Intensa-Mente_ (🇦🇷🇧🇴🇨🇱🇨🇴🇨🇷🇨🇺🇩🇴🇪🇨🇸🇻🇬🇹🇭🇳🇲🇽🇳🇮🇵🇾🇵🇪🇵🇷🇺🇾🇻🇪)] se ha pedido una aplicación de consola con la cual el usuario pueda gestionar las emociones de momentos vividos en un diario cada momento contará con un título una fecha en que ocurrió y una emoción asignada; además de un identificador fecha de creación y fecha de modificación.
@@ -140,34 +134,37 @@ classDiagram
 
     ![Historia de Usuario](images/projectoInsideOut-ACTIONS.webp)
 
-    ```zenuml
-    title Moment Emotion Controller
-    @Actor Riley #FFEBE6
-    @Boundary TerminalMenu #0747A6
-    @control <<Moment>> Controller #E3FCEF
-    group MomentContoller {
-      @database Setter
-      @entity Getter
-    }
+>    ```mermaid
+>    zenuml
+>    title Moment Emotion Controller
+>    @Actor Riley #FFEBE6
+>    @Boundary TerminalMenu #0747A6
+>    @control <<Moment>> Controller #E3FCEF
+>    group MomentContoller {
+>      @database Setter
+>      @entity Getter
+>    }
+>
+>    @Starter(Riley)
+>    // `App/mainMenu`
+>    TerminalMenu.post(scanner) {
+>      Controller.run(getInput) {
+>        moment = new Moment(EmotionType)
+>        if(EmotionType != null) {
+>          par {
+>            Setter.create(moment)
+>            Setter.update(moment)
+>            Getter.view(moment)
+>            Getter.filter(moment)
+>            Setter.delete(moment)      
+>          }      
+>        }
+>      }
+>    }
+>    
+>    ```
+>
 
-    @Starter(Riley)
-    // `App/mainMenu`
-    TerminalMenu.post(scanner) {
-      Controller.run(getInput) {
-        moment = new Moment(EmotionType)
-        if(EmotionType != null) {
-          par {
-            Setter.create(moment)
-            Setter.update(moment)
-            Getter.view(moment)
-            Getter.filter(moment)
-            Setter.delete(moment)      
-          }      
-        }
-      }
-    }
-    
-    ```
     
   - MODELO VISTA CONTROLADOR
 
