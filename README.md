@@ -14,7 +14,7 @@ Basado en la película **Inside Out** 🇬🇧🇺🇸 [_Del Revés_ 🇪🇸, _
 
 ### Realización de Diagramas
 
->    - Clases
+>    - Clasesh
 >    - Historia de Usuario
 >    - Modelo Vista Controlador (MVC)
 
@@ -71,7 +71,7 @@ De las URL que aparecen a continuación realizar las descargas de los paquetes c
 
 ```mermaid
 ---
-title: Diagrama de Clases
+title: DIAGRAMA DE CLASES 
 ---
 classDiagram
     App.java <|--> TerminalMenu
