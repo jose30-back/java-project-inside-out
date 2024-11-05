@@ -133,6 +133,36 @@ classDiagram
   - HISTORIAS DE USUARIOS
 
     ![Historia de Usuario](images/projectoInsideOut-ACTIONS.webp)
+
+    ```mermaid
+    zenuml
+    title Moment Emotion Controller
+    @Actor Riley #FFEBE6
+    @Boundary TerminalMenu #0747A6
+    @control <<Moment>> Controller #E3FCEF
+    group MomentContoller {
+      @database Setter
+      @entity Getter
+    }
+
+    @Starter(Riley)
+    // `App/mainMenu`
+    TerminalMenu.post(scanner) {
+      Controller.run(getInput) {
+        moment = new Moment(EmotionType)
+        if(EmotionType != null) {
+          par {
+            Setter.create(moment)
+            Setter.update(moment)
+            Getter.view(moment)
+            Getter.filter(moment)
+            Setter.delete(moment)      
+          }      
+        }
+      }
+    }
+    
+    ```
     
   - MODELO VISTA CONTROLADOR
 
