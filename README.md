@@ -134,8 +134,7 @@ classDiagram
 
     ![Historia de Usuario](images/projectoInsideOut-ACTIONS.webp)
 
-    ```mermaid
-    zenuml
+    ```zenuml
     title Moment Emotion Controller
     @Actor Riley #FFEBE6
     @Boundary TerminalMenu #0747A6
