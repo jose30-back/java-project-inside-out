@@ -68,6 +68,67 @@ De las URL que aparecen a continuación realizar las descargas de los paquetes c
   - DIAGRAMA DE CLASES
 
     ![Diagrama de Clases](images/projectoInsideOut-CLASES.webp)
+
+```mermaid
+---
+title: Diagrama de Clases
+---
+classDiagram
+    App.java <|--> TerminalMenu
+    TerminalMenu <|--> MomentController
+    Moments <|--> EmotionType
+ 
+    class App.java{
+        Inicio
+        public void run() (run app.java automatically)
+        private void displayMenu() (display main menu from TerminalMenu)
+        private void exit()
+    }
+
+    class EmotionType{
+        Index
+        Joy()
+        Sadness()
+        Anger()
+        Disgust()
+        Fear()
+        Anxiety()
+        Envy()
+        Shame()
+        Boredom()
+        Nostalgy()
+    }
+
+    class Moments{
+        +int id
+        +str title
+        +str description
+        +LocalDateTime momentDate
+        +private (EmotionType) emotion
+        +private (LocalDateTime) createdDate
+        +private (LocalDateTime) updatedDate
+    }
+
+    class TerminalMenu{
+        +int Scanner
+        public void displayMainMenu()
+        public void displayFilterMenu()
+        public String getInput()
+        public void displayMessage(): String
+        public void displayMomentList() List<Moment>
+        public void displayEmotionOptions()
+    } 
+ 
+    class MomentController{
+        +param
+        private void addMoment()
+        private void viewMoments()
+        private void deleteMoment()
+        private void filterMomentsByEmotion()
+        private void filterMomentsByDate()
+    }
+
+```
     
   - HISTORIAS DE USUARIOS
 
