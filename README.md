@@ -27,6 +27,7 @@ Basado en la película **Inside Out** 🇬🇧🇺🇸 [_Del Revés_ 🇪🇸, _
 >    · Hamcrest (Dependencia)
 >- Extensiones (VSC) - Visual Studio Code
 >    · **Extension Pack for Java** del editor Microsoft <sup>este instalará los que aparecen a continuación</sup>
+
 >        1. Language Support for Java(TM) by Red Hat
 >        2. Debugger for Java
 >        3. Test Runner for Java
@@ -34,6 +35,10 @@ Basado en la película **Inside Out** 🇬🇧🇺🇸 [_Del Revés_ 🇪🇸, _
 >        5. Gradle for Java
 >        6. Project Manager for Java 
 >        7. IntelliCode
+
+>  - JUnit5 JAR Downloader extensión by Raj Kundu
+>
+>      
 
 ## Pasos para la instalación 
 
