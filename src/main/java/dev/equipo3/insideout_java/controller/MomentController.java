@@ -11,6 +11,7 @@ public class MomentController {
     private final MomentViewController viewController = new MomentViewController(momentRepository, terminalMenu);
     private final MomentDeleteController deleteController = new MomentDeleteController(momentRepository, terminalMenu);
     private final MomentFilterController filterController = new MomentFilterController(momentRepository, terminalMenu);
+    private final MomentUpdateController updateController = new MomentUpdateController(momentRepository, terminalMenu);
 
     public void displayMainMenu() {
         terminalMenu.displayMainMenu();
@@ -30,6 +31,10 @@ public class MomentController {
 
     public void deleteMoment() {
         deleteController.deleteMoment();
+    }
+
+    public void updateMoment() {
+        updateController.updateMoment();
     }
 
     public void filterMoments() {
