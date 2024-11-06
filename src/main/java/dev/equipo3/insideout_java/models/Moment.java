@@ -52,8 +52,8 @@ public class Moment {
         return createdDate;
     }
 
-    public LocalDateTime getUpdatedDate() {
-        return updatedDate;
+    public void updateUpdatedDate(){
+        this.updatedDate = LocalDateTime.now();
     }
 
     public void setTitle(String title) {
