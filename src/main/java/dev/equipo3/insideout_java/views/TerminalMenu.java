@@ -13,10 +13,20 @@ public class TerminalMenu {
         System.out.println("\n--- My diary: ---");
         System.out.println("1. Add Moment");
         System.out.println("2. View all available moments");
-        System.out.println("3. Delete Moment");
-        System.out.println("4. Filter Moments");
-        System.out.println("5. Exit");
+        System.out.println("3. Update Moment");
+        System.out.println("4. Delete Moment");
+        System.out.println("5. Filter Moments");
+        System.out.println("6. Exit");
         System.out.print("Select an option: ");
+    }
+
+    public void displayUpdateOptions() {
+        System.out.println("\nChoose what you want to update:");
+        System.out.println("1. Title");
+        System.out.println("2. Description");
+        System.out.println("3. Date");
+        System.out.println("4. Emotion");
+        System.out.print("Enter your choice: ");
     }
 
     public void displayFilterMenu() {
@@ -51,6 +61,27 @@ public class TerminalMenu {
 
     public String getInput() {
         return scanner.nextLine();
+    }
+
+    public int displayYesNoMenu() {
+        System.out.println("Do you want to update another field?");
+        System.out.println("1. Yes");
+        System.out.println("2. No");
+        System.out.print("Select an option: ");
+        int choice;
+        while (true) {
+            try {
+                choice = Integer.parseInt(getInput());
+                if (choice == 1 || choice == 2) {
+                    break;
+                } else {
+                    System.out.println("Invalid choice. Please enter 1 for Yes or 2 for No.");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Please enter a valid number (1 or 2).");
+            }
+        }
+        return choice;
     }
 
 }

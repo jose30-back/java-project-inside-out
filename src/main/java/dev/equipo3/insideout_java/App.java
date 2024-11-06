@@ -15,9 +15,10 @@ public class App {
                 switch (Integer.parseInt(input)) {
                     case 1 -> momentController.addMoment();
                     case 2 -> momentController.viewMoments();
-                    case 3 -> momentController.deleteMoment();
-                    case 4 -> momentController.filterMoments();
-                    case 5 -> exit();
+                    case 3 -> momentController.updateMoment();
+                    case 4 -> momentController.deleteMoment();
+                    case 5 -> momentController.filterMoments();
+                    case 6 -> exit();
                     default -> momentController.getTerminalMenu().displayMessage("Invalid choice.");
                 }
             } catch (NumberFormatException e) {
