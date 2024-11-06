@@ -1,7 +1,6 @@
 package dev.equipo3.insideout_java.repository;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,6 +11,9 @@ public class MomentRepository {
     private final List<Moment> moments = new ArrayList<>();
 
     public void addMoment(Moment moment) {
+        if (moment == null) {
+            return; 
+        }
         moments.add(moment);
     }
 
@@ -41,5 +43,14 @@ public class MomentRepository {
             }
         }
         return filtered;
+    }
+
+    public Moment getMomentById(int id) {
+        for (Moment moment : moments) {
+            if (moment.getId() == id) {
+                return moment;
+            }
+        }
+        return null; 
     }
 }
