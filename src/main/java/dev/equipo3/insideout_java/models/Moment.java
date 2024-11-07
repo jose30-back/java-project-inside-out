@@ -64,6 +64,10 @@ public class Moment {
         this.description = description;
     }
 
+    public LocalDateTime getUpdatedDate() {
+        return updatedDate;
+    }
+
     public void setEmotions(Emotions emotion) {
         this.emotion = emotion;
     }
