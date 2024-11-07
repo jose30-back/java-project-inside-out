@@ -40,8 +40,8 @@ Basado en la película **Inside Out** 🇬🇧🇺🇸 [_Del Revés_ 🇪🇸, _
 >  - JUnit5 JAR Downloader extensión by Raj Kundu
 >
 >      
-    ![Junit5](images/JUnit5.png)
-
+       ![Junit5](images/JUnit5.png)
+>
 ## Pasos para la instalación 
 
 De las URL que aparecen a continuación realizar las descargas de los paquetes correspondientes a los programas (Java 21, Apache Maven, VSC - Visual Studio Code) en este caso Java en la versión 21
