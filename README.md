@@ -3,6 +3,8 @@
 Basado en la película **Inside Out** 🇬🇧🇺🇸 [_Del Revés_ 🇪🇸, _Intensa-Mente_ (🇦🇷🇧🇴🇨🇱🇨🇴🇨🇷🇨🇺🇩🇴🇪🇨🇸🇻🇬🇹🇭🇳🇲🇽🇳🇮🇵🇾🇵🇪🇵🇷🇺🇾🇻🇪)] se ha pedido una aplicación de consola con la cual el usuario pueda gestionar las emociones de momentos vividos en un diario cada momento contará con un título una fecha en que ocurrió y una emoción asignada; además de un identificador fecha de creación y fecha de modificación.
 
 ![Emociones: personajes de la pelicula INSIDE OUT Joy, Sadness, Anger, Disgust, Fear, Anxiety, Envy, Shame, Boredom. Nostalgia](images/inside-out-2-1280x540-17820.jpg)
+<sup>  Joy   Anxiety    Anger   Sadnees     Embarrassment    Fear       Boredom     Disgust      Envy</sup>
+<sub>Alegría Ansiedad    Ira    Tristeza      Verguenza      Temor   Aburrimiento  Desagrado    Envidia</sub>
 
 ## Descripción con SIPNOSIS del proyecto 
 
@@ -28,7 +30,9 @@ Basado en la película **Inside Out** 🇬🇧🇺🇸 [_Del Revés_ 🇪🇸, _
 >- Extensiones (VSC) - Visual Studio Code
 
 >    · **Extension Pack for Java** del editor Microsoft <sup>este instalará los que aparecen a continuación</sup>
-        ![ExtPk4Java](images/ExtPk4Java.png)
+
+![ExtPk4Java](images/ExtPk4Java.png)
+
 >        1. Language Support for Java(TM) by Red Hat
 >        2. Debugger for Java
 >        3. Test Runner for Java
@@ -40,7 +44,8 @@ Basado en la película **Inside Out** 🇬🇧🇺🇸 [_Del Revés_ 🇪🇸, _
 >  - JUnit5 JAR Downloader extensión by Raj Kundu
 >
 >      
-    ![Junit5](images/JUnit5.png)
+![Junit5](images/JUnit5.png)
+>
 
 ## Pasos para la instalación 
 
