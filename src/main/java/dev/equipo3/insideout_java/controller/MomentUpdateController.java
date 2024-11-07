@@ -89,7 +89,7 @@ public class MomentUpdateController {
         }
     }
 
-    private int getValidInput() {
+    int getValidInput() {
         int choice = -1;
         boolean validInput = false;
         while (!validInput) {
@@ -103,7 +103,7 @@ public class MomentUpdateController {
         return choice;
     }
 
-    private LocalDate parseDate(String date) {
+    LocalDate parseDate(String date) {
         try {
             DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
             return LocalDate.parse(date, dateFormatter);
@@ -113,7 +113,7 @@ public class MomentUpdateController {
         }
     }
 
-    private Emotions selectEmotion() {
+    Emotions selectEmotion() {
         terminalMenu.displayEmotionOptions();
         int emotionsChoice = Integer.parseInt(terminalMenu.getInput());
         return Emotions.getByIndex(emotionsChoice);

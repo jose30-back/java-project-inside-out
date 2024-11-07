@@ -40,7 +40,7 @@ public class MomentFilterController {
         return Emotions.getByIndex(emotionsChoice);
     }
 
-    private LocalDate parseDate(String date) {
+    LocalDate parseDate(String date) {
         try {
             DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
             return LocalDate.parse(date, dateFormatter);
