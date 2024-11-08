@@ -79,4 +79,11 @@ public class MomentUpdateControllerTest {
         assertThat(result, is(nullValue()));
     }
 
+    @Test
+    public void testParseDate_EmptyString() {
+        String inputDate = "";
+        LocalDate result = momentUpdateController.parseDate(inputDate);
+        assertThat(result, is(nullValue()));
+    }
+
 }

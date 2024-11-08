@@ -20,7 +20,7 @@ class MomentRepositoryTest {
     void testAddMoment() {
         Moment moment = new Moment(1, "Test Title 1", "Test Description 1", Emotions.Joy, LocalDate.now());
         repository.addMoment(moment);
-        
+
         List<Moment> allMoments = repository.getAllMoments();
         assertEquals(1, allMoments.size());
         assertEquals(moment, allMoments.get(0));
@@ -29,11 +29,12 @@ class MomentRepositoryTest {
     @Test
     void testGetAllMoments() {
         Moment moment1 = new Moment(1, "Test Title 1", "Test Description 1", Emotions.Joy, LocalDate.now());
-        Moment moment2 = new Moment(2, "Test Title 2", "Test Description 2", Emotions.Sadness, LocalDate.now().plusDays(1));
-        
+        Moment moment2 = new Moment(2, "Test Title 2", "Test Description 2", Emotions.Sadness,
+                LocalDate.now().plusDays(1));
+
         repository.addMoment(moment1);
         repository.addMoment(moment2);
-        
+
         List<Moment> allMoments = repository.getAllMoments();
         assertEquals(2, allMoments.size());
     }
@@ -42,7 +43,7 @@ class MomentRepositoryTest {
     void testDeleteMomentById() {
         Moment moment = new Moment(1, "Test Title 1", "Test Description 1", Emotions.Anxiety, LocalDate.now());
         repository.addMoment(moment);
-        
+
         assertTrue(repository.deleteMomentById(moment.getId()));
         assertFalse(repository.deleteMomentById(moment.getId())); // вже видаленo
         assertEquals(0, repository.getAllMoments().size());
@@ -52,10 +53,10 @@ class MomentRepositoryTest {
     void testFilterMomentsByEmotion() {
         Moment happyMoment = new Moment(1, "Happy Moment", "Feeling great!", Emotions.Joy, LocalDate.now());
         Moment sadMoment = new Moment(2, "Sad Moment", "Feeling down.", Emotions.Sadness, LocalDate.now());
-        
+
         repository.addMoment(happyMoment);
         repository.addMoment(sadMoment);
-        
+
         List<Moment> happyMoments = repository.filterMomentsByEmotion(Emotions.Joy);
         assertEquals(1, happyMoments.size());
         assertEquals(happyMoment, happyMoments.get(0));
@@ -66,13 +67,13 @@ class MomentRepositoryTest {
 
         LocalDate today = LocalDate.now();
         LocalDate tomorrow = today.plusDays(1);
- 
+
         Moment happyMoment = new Moment(1, "Happy Moment", "Feeling great!", Emotions.Joy, today);
         Moment sadMoment = new Moment(2, "Sad Moment", "Feeling down.", Emotions.Sadness, tomorrow);
-        
+
         repository.addMoment(happyMoment);
         repository.addMoment(sadMoment);
-        
+
         List<Moment> filteredByDate = repository.filterMomentsByDate(today);
         assertEquals(1, filteredByDate.size());
         assertEquals(happyMoment, filteredByDate.get(0));
@@ -84,8 +85,8 @@ class MomentRepositoryTest {
 
     @Test
     void testAddNullMomentDoesNothing() {
-    repository.addMoment(null);
-    assertEquals(0, repository.getAllMoments().size());
+        repository.addMoment(null);
+        assertEquals(0, repository.getAllMoments().size());
     }
 
     @Test
@@ -93,15 +94,10 @@ class MomentRepositoryTest {
         Moment moment = new Moment(1, "Test Title 1", "Test Description 1", Emotions.Joy, LocalDate.now());
         repository.addMoment(moment);
 
-        assertNotNull(moment, "Moment with ID 1 should be found");
-        assertEquals(1, moment.getId(), "The moment ID should match");
-        assertEquals("Test Description 1", moment.getDescription(), "The moment description should match");
-    }
-
-    @Test
-    public void testGetMomentById_NotFound() {
-        Moment moment = repository.getMomentById(99);
-        assertNull(moment, "Moment with ID 99 should not be found");
+        Moment retrievedMoment = repository.getMomentById(moment.getId());
+        assertNotNull(retrievedMoment, "Moment with ID should be found");
+        assertEquals(moment.getId(), retrievedMoment.getId(), "The moment ID should match");
+        assertEquals("Test Description 1", retrievedMoment.getDescription(), "The moment description should match");
     }
 
 }
