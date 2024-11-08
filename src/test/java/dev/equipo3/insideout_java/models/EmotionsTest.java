@@ -28,5 +28,7 @@ public class EmotionsTest {
     public void testValues() {
         Emotions[] emotions = Emotions.values();
         assertThat(emotions.length, is(10));
+        assertThat(emotions, hasItem(Emotions.Joy));
+        assertThat(emotions, hasItem(Emotions.Fear));
     }
 }
