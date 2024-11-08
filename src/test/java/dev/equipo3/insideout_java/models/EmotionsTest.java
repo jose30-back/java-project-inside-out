@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Test;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
+import java.util.Arrays;
+
 public class EmotionsTest {
 
     @Test
@@ -28,7 +30,7 @@ public class EmotionsTest {
     public void testValues() {
         Emotions[] emotions = Emotions.values();
         assertThat(emotions.length, is(10));
-        assertThat(emotions, hasItem(Emotions.Joy));
-        assertThat(emotions, hasItem(Emotions.Fear));
+        assertThat(Arrays.asList(emotions), hasItem(Emotions.Joy));
+        assertThat(Arrays.asList(emotions), hasItem(Emotions.Fear));
     }
 }
